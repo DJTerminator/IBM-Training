@@ -1,0 +1,17 @@
+table{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+th{
+  height: 50px;
+  width: 100px;
+  background-color: 	#D2691E	;
+  border: 1px solid #e3e3e3;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}

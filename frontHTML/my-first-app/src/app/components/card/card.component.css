@@ -1,0 +1,17 @@
+td{
+  height: 50px;
+  width: 100px;
+  background-color: 	#800000;
+  border: 1px solid #e3e3e3;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  color: white;
+
+}
+
+button{
+  background: 	#CD853F !important;
+  color: #A52A2A !important;
+  border: none;
+}

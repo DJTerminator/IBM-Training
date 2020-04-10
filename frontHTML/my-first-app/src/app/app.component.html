@@ -1,0 +1,62 @@
+<!--<h1>First Angular App-Change</h1>
+<h2>{{title}}</h2>
+<my-date></my-date>
+<my-text></my-text>-->
+<!-- <app-badge></app-badge>
+<app-badge caption="Inbox" count="22"></app-badge>
+<app-badge caption="Sent" count="33"></app-badge>
+<app-badge caption="Spam" count="3443"></app-badge> -->
+
+<!-- <div class="container">
+  <div class="row"> -->
+
+ <!-- <div class="input-group mb-3"></div>
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Todo text: </span>
+      </div>
+      <input type="text" #todo (keyup)="0" class="form-control" placeholder="Enter a to-do item here" aria-label="Username" aria-describedby="basic-addon1">
+      {{todo.value}}
+      <button (click)="addTodo(todo.value)">Add a Todo Item</button>
+    </div>
+  </div> -->
+
+ <!-- <div class="container">
+  <div class="row">
+      <app-card *ngFor="let course of courses" caption="{{course.name}}" summary="{{course.salary}}"
+      id="{{course.id}}"></app-card>
+  </div>
+</div> -->
+
+<!-- <h1>{{ 'yo My NAME is DigViJaY SiNgH RaWaT' | sentenceCase}}</h1>> -->
+
+<div class="container">
+  <div class="row">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Search Employee </span>
+      </div>
+      <input type="text" #name (keyup)="0" class="form-control" placeholder="Enter a name here"
+      aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+      <app-card *ngFor="let course of courses | search:name.value" caption="{{course.name}}"
+      summary="{{course.salary}}" id="{{course.id}}"></app-card>
+  </div>
+</div>
+
+  <!-- <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <app-jumbotron></app-jumbotron>>
+    </div>>
+  </div> -->
+  <!-- <table>
+
+    <tr>
+      <th>id</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Delete</th>
+    </tr>
+    <app-card *ngFor="let course of courses" id="{{course.id}}" caption="{{course.name}}" summary="{{course.salary}}">
+    </app-card>
+
+  </table> -->
