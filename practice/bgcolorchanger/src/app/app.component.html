@@ -1,0 +1,12 @@
+<div class="center">
+  <h1>Background changer</h1>
+    <!-- <button type = "button" class="button" onclick="randomcolor()">change color!</button> -->
+    <!-- <button (click)=”handleClick(event)” type=”button”>Button</button> -->
+    <input
+    type="button"
+    class="button"
+    value="Change color"
+    onclick="document.body.style.backgroundColor = '#' + Math.random().toString(16).slice(2, 8);"
+>
+</div>
+
