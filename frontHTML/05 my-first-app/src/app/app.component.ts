@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CourseService } from './services/course.service';
+import { CommonService } from './services/common.service';
 
 
 @Component({
@@ -11,22 +12,27 @@ import { CourseService } from './services/course.service';
 export class AppComponent implements OnInit{
 
 
-  constructor(public courseService: CourseService ){
+  constructor(public courseService: CourseService ,commonService: CommonService){}
 
-  }
 
   ngOnInit(){
     console.log('Initialization code will be...')
     // this.http.get('http://localhost:8008/api/employee').toPromise()
     this.courseService.fetchAllCourses()
-    .then((res: any) => {
+    .subscribe((res: any) => {
       console.log(res);
       this.courses = res;
     })
   }
 
+  // handleLoadedEvent(data: Array<string>){
+  //   console.log('In parent app component...', data)
+  //   this.alphabets = data
+  // }
 
   title :string = 'Welcome to Angular App';
   courses: Array<any> = []
+  alphabets: Array<string> = []
 }
+
 
