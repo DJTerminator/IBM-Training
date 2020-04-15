@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/services/employee.service';
+import { Employee } from 'src/app/models/employee';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-employee',
@@ -7,15 +9,14 @@ import { EmployeeService } from 'src/app/services/employee.service';
   styleUrls: ['./view-employee.component.css']
 })
 export class ViewEmployeeComponent implements OnInit {
-
-  employees: Array<any> = []
   showMessage : boolean = false;
+  employees: Array<Employee> = []
 
-  constructor(private employeeService : EmployeeService) { }
+  constructor(private employeeService : EmployeeService, private router: Router) { }
 
   ngOnInit(): void {
     this.employeeService.fetchAllEmployees()
-    .subscribe((res:any)=> {
+    .subscribe((res:Array<Employee>)=> {
       console.log(res);
       this.employees = res;
     })
@@ -31,6 +32,10 @@ export class ViewEmployeeComponent implements OnInit {
      }
     })
   }
+
+  editEmployee(employee: Employee){
+    console.log('edit employee' , employee);
+    this.router.navigate(['add', employee])
+  }
+
 }
-
-

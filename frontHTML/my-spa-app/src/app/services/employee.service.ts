@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Employee } from '../models/employee';
 
 const baseUrl = 'http://localhost:8008/api/employee/'
 @Injectable({
@@ -14,13 +14,22 @@ export class EmployeeService {
     return this.http.get(baseUrl);
   }
 
-  addEmployee(name: string, salary: number){
+  addEmployee(employee: Employee){
+    console.log('In service : ', employee)
     return this.http.post(baseUrl,
-      {name: name, salary: salary},{observe : 'response'})
+      employee,{observe : 'response'})
+
+  }
+
+  updateEmployee(employee: Employee){
+    console.log('In service : ', employee)
+    return this.http.put(baseUrl,
+      employee,{observe : 'response'})
 
   }
 
   deleteEmployee(id: number){
     return this.http.delete(baseUrl + id, {observe : 'response'})
- }
+
+  }
 }
