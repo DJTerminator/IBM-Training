@@ -1,0 +1,11 @@
+<p>viewing quizes!</p>
+<hr/>
+
+<div class="card" style="width: 18rem;" *ngFor="let q of quizzes">
+
+  <div class="card-body">
+    <h4 class="card-title" >{{q.name}}</h4>
+
+    <button class="btn btn-primary" (click)="fetchAllQuestions(q.questions)">Start</button>
+  </div>
+</div>
