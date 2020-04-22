@@ -1,0 +1,25 @@
+
+<div class="container">
+  <div class="jumbotron">
+      <div class="row">
+          <div class="column">
+              <h3 class="display-5">{{currentQuestion.question}}</h3>
+              <div *ngFor="let op of options" class="lead">
+                  <label><input type="radio"  (click)="calculate(op.answer)" name="saiyyam">{{op.options}}</label>
+
+              </div>
+              <div class="btn-toolbar">
+              <span class="lead" *ngIf="! isLastQuestion">
+                  <a class="btn btn-primary btn-lg"  (click)="nextQuestion()">Next Question</a>
+              </span>
+              <span class="lead" style="margin-left: auto">
+                  <a class="btn btn-primary btn-success" (click)="viewResult()">Submit</a>
+              </span>
+              <span class="lead" *ngIf="! isFirstQuestion" style="margin-left: auto">
+                <a class="btn btn-primary btn-lg" (click)="previousQuestion()">Previous Question</a>
+            </span>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

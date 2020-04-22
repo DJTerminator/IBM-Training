@@ -13,8 +13,7 @@ export class QuizService {
   fetchAllQuiz(){
     return this.http.get(baseUrl);
   }
-
-  fetchAllQuestions(id: number){
-      console.log("fetch all questions works !");
+  fetchSingleQuestion(quizName:string){
+    return this.http.get(baseUrl+quizName);
   }
 }

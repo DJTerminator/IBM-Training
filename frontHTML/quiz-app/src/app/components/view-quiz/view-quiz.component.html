@@ -1,11 +1,22 @@
-<p>viewing quizes!</p>
-<hr/>
 
-<div class="card" style="width: 18rem;" *ngFor="let q of quizzes">
-
+<!-- <div class="card" style="width: 18rem;" *ngFor="let q of quizzes">
   <div class="card-body">
     <h4 class="card-title" >{{q.name}}</h4>
-
-    <button class="btn btn-primary" (click)="fetchAllQuestions(q.questions)">Start</button>
+    <button class="btn btn-primary" (click)="fetchAllQuestions(q)">Start</button>
   </div>
+  <br>
+</div> -->
+<div class="container">
+<div class="jumbotron">
+  <h1 class="display-4">Test Your Knowledge</h1>
+  <!-- <p class="lead">This is a simple hero unit</p> -->
+  <div class="row">
+  <div class="card" style="width: 18rem;" *ngFor="let q of quizzes">
+    <div class="card-body">
+      <h4 class="card-title" >{{q.name}}</h4>
+      <button class="btn btn-primary" (click)="fetchAllQuestions(q)">Start</button>
+    </div>
+  </div>
+</div>
+</div>
 </div>

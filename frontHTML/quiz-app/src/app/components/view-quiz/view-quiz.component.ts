@@ -24,15 +24,12 @@ export class ViewQuizComponent implements OnInit {
     })
   }
 
-  // fetchAllQuestions(id: number){
-  //   this.quizService.fetchAllQuestions(id)
-  //   .subscribe((res:Array<Question>)=>{
-  //     console.log(res);
-  //     this.questions =res;
-  //   })
-  // }
-
-  fetchAllQuestions(id:number){}
+  fetchAllQuestions(questions: Quiz){
+    console.log("in take quiz",questions);
+    this.router.navigate(["take",{name :questions.name}]);
+    }
+  }
 
 
-}
+
+
